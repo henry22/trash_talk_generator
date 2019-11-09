@@ -16,7 +16,7 @@ function generateTrashTalk(occupation) {
   // generate trash talk based on the selection
   let trashTalk = ''
 
-  if (occupation === 'developer') {
+  if (occupation === 'engineer') {
     trashTalk = `身為一個${target[0]}，${sampleWords(task.engineer)}，${sampleWords(phrase)}吧！`
   }
 

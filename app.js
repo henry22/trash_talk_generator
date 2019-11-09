@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const expressHandlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
+const generateTrashTalk = require('./generate_trashtalk')
 
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
@@ -14,8 +15,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log('req body', req.body)
-  res.render('index')
+  const occupation = req.body.occupation
+  res.render('index', { trashTalk: generateTrashTalk(occupation)})
 })
 
 app.listen(port, () => console.log(`The server is listening on http://localhost:${port}`))
