@@ -38,3 +38,6 @@ $ npm run dev
 
 ##這個產生器產生的每一句話，都有同樣的格式：
 ![image](https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5713/pasted_image_0__38_.png)
+
+# Screenshot
+![image](./public/img/trash_talk_generator.png)
