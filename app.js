@@ -11,9 +11,10 @@ app.engine('handlebars', expressHandlebars({
     is: function(arg1, arg2, options) {
       if (arg1 === arg2) {
         return options.fn(this)
-      } else {
-        return options.inverse(this)
       }
+      // else {
+      //   return options.inverse(this)
+      // }
     }
   }
 }))
@@ -27,8 +28,9 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const occupation = req.body.occupation
+  const isSelected = occupation ? true : false
 
-  res.render('index', { trashTalk: generateTrashTalk(occupation), occupation: occupation})
+  res.render('index', { trashTalk: generateTrashTalk(occupation), occupation: occupation, notSelected: !isSelected })
 })
 
 app.listen(port, () => console.log(`The server is listening on http://localhost:${port}`))

@@ -33,11 +33,11 @@
     </div>
 
     {{!-- error message --}}
-    {{#is occupation undefined}}
+    {{#if notSelected}}
     <div class="alert alert-danger text-center" role="alert">
       <span class="mr-2">請勾選一個選項</span>
     </div>
-    {{/is}}
+    {{/if}}
 
     <div class="row">
       <div class="form-group col-2 text-right">
