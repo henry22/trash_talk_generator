@@ -7,7 +7,7 @@
         <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="Angry developer avatar" style="height:280px;">
         <div class="card-body text-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="engineer" name="occupation" class="custom-control-input" value="engineer">
+            <input type="radio" id="engineer" name="occupation" class="custom-control-input" value="engineer" {{#is occupation "engineer"}}checked{{/is}}>
             <label class="custom-control-label" for="engineer">工程師</label>
           </div>
         </div>
@@ -16,7 +16,7 @@
         <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="Angry designer avatar" style="height:280px;">
         <div class="card-body text-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="designer" name="occupation" class="custom-control-input" value="designer">
+            <input type="radio" id="designer" name="occupation" class="custom-control-input" value="designer" {{#is occupation "designer"}}checked{{/is}}>
             <label class="custom-control-label" for="designer">設計師</label>
           </div>
         </div>
@@ -25,7 +25,7 @@
         <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="Angry founder avatar" style="height:280px;">
         <div class="card-body text-center">
           <div class="custom-control custom-radio">
-            <input type="radio" id="entrepreneur" name="occupation" class="custom-control-input" value="entrepreneur">
+            <input type="radio" id="entrepreneur" name="occupation" class="custom-control-input" value="entrepreneur" {{#is occupation "entrepreneur"}}checked{{/is}}>
             <label class="custom-control-label" for="entrepreneur">創業家</label>
           </div>
         </div>
@@ -33,9 +33,11 @@
     </div>
 
     {{!-- error message --}}
+    {{#is occupation undefined}}
     <div class="alert alert-danger text-center" role="alert">
       <span class="mr-2">請勾選一個選項</span>
     </div>
+    {{/is}}
 
     <div class="row">
       <div class="form-group col-2 text-right">
