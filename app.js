@@ -7,7 +7,7 @@ app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
-  res.send('Hello world')
+  res.render('index')
 })
 
 app.listen(port, () => console.log(`The server is listening on http://localhost:${port}`))
