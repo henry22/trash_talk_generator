@@ -36,7 +36,7 @@ $ npm run dev
 - 使用者可以在工程師、設計師、或創業家中選擇一個對象（三選一)
 - 使用者按下【產生幹話】後，旁邊的 textbox 就會出現一句幹話
 
-##這個產生器產生的每一句話，都有同樣的格式：
+## 這個產生器產生的每一句話，都有同樣的格式：
 ![image](https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5713/pasted_image_0__38_.png)
 
 # Screenshot
